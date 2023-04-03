@@ -1,6 +1,5 @@
 import pysmile
 import pysmile_license
-
 from colorama import init, Fore
 import random
 # Tutorial2 loads the XDSL file created by Tutorial1,
@@ -55,6 +54,18 @@ class BotShooterIAA:
 
             print(Fore.RED + "Resultado con evidencias calculadas: ")
             self.print_all_posteriors(net)
+            """
+            # cargar los datos
+            ds = pysmile.learning.DataSet()
+            ds.read_file("aprendizaje.txt")
+
+            # emparejar datos y red
+            matching = ds.match_network(net)
+
+            # ejecutar el algoritmo de aprendizaje EM
+            em = pysmile.learning.EM()
+            em.learn(ds, net, matching)
+            """
             
         elif self.opcionRand == "N" or self.opcionRand == "n": 
 
@@ -111,6 +122,10 @@ class BotShooterIAA:
             print(Fore.RED + "Resultado con evidencias calculadas: ")
             self.print_all_posteriors(net)
 
+        
+        
+
+
         else:
             raise Exception(Fore.RED + "Debes elegir si activar el modo aleatorio o no")
 
@@ -146,3 +161,19 @@ class BotShooterIAA:
         #print("")
 
 ejemplo = BotShooterIAA()
+
+
+'''
+ds = pysmile.learning.DataSet()
+ds.read_file("mydatafile.txt")
+baySearch = pysmile.learning.BayesianSearch()
+net = baySearch.learn(ds)
+
+
+ds = pysmile.learning.DataSet()
+net = pysmile.Network()
+# load network and data here
+matching = ds.match_network(net)
+em = pysmile.learning.EM()
+em.learn(ds, net, matching)
+'''
