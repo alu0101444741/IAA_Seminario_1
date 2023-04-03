@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="St">
+			<state id="Atacar" />
+			<state id="Recoger_Armas" />
+			<state id="Recoger_Energia" />
+			<state id="Explorar" />
+			<state id="Huir" />
+			<state id="Detectar_Peligro" />
+			<probabilities>0.163003663003663 0.168997668997669 0.1490176490176491 0.175990675990676 0.163003663003663 0.17998667998668</probabilities>
+		</cpt>
+		<cpt id="st_1">
+			<state id="Atacar" />
+			<state id="Recoger_Armas" />
+			<state id="Recoger_Energia" />
+			<state id="Explorar" />
+			<state id="Huir" />
+			<state id="Detectar_Peligro" />
+			<parents>St</parents>
+			<probabilities>0.5802845528455285 0.1717479674796748 0.1717479674796748 0.02540650406504065 0.0193089430894309 0.03150406504065041 0.5480392156862746 0.05980392156862745 0.01862745098039216 0.242156862745098 0.006862745098039216 0.1245098039215686 0.3677777777777778 0.06777777777777778 0.04111111111111112 0.2277777777777778 0.02111111111111111 0.2744444444444444 0.5489642184557439 0.09698681732580039 0.06308851224105461 0.1986817325800377 0.0009416195856873823 0.09133709981167609 0.3790650406504066 0.03150406504065041 0.2327235772357724 0.1839430894308944 0.07418699186991871 0.09857723577235775 0.5976058931860037 0.03406998158379374 0.05064456721915285 0.1832412523020258 0.02302025782688766 0.1114180478821363</probabilities>
+		</cpt>
+		<cpt id="H">
+			<state id="Alta" />
+			<state id="Baja" />
+			<parents>st_1</parents>
+			<probabilities>0.7211350293542074 0.2788649706457925 0.6168831168831169 0.3831168831168831 0.09895833333333333 0.9010416666666666 0.4353932584269663 0.5646067415730337 0.3125 0.6875 0.5875 0.4125</probabilities>
+		</cpt>
+		<cpt id="W">
+			<state id="armado" />
+			<state id="desarmado" />
+			<parents>st_1</parents>
+			<probabilities>0.9031311154598826 0.09686888454011741 0.3311688311688312 0.6688311688311689 0.3802083333333333 0.6197916666666666 0.2556179775280899 0.7443820224719101 0.02083333333333333 0.9791666666666666 0.8875 0.1125</probabilities>
+		</cpt>
+		<cpt id="OW">
+			<state id="armado" />
+			<state id="desarmado" />
+			<parents>st_1</parents>
+			<probabilities>0.4569471624266145 0.5430528375733855 0.3701298701298701 0.6298701298701299 0.4427083333333333 0.5572916666666666 0.3286516853932584 0.6713483146067416 0.5625 0.4375 0.2875 0.7125</probabilities>
+		</cpt>
+		<cpt id="HN">
+			<state id="si" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.6017612524461839 0.3982387475538161 0.6168831168831169 0.3831168831168831 0.5572916666666666 0.4427083333333333 0.8117977528089887 0.1882022471910112 0.8958333333333333 0.1041666666666667 0.8041666666666667 0.1958333333333333</probabilities>
+		</cpt>
+		<cpt id="NE">
+			<state id="si" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.8933463796477494 0.1066536203522505 0.1883116883116883 0.8116883116883118 0.171875 0.828125 0.1938202247191011 0.8061797752808989 0.9791666666666666 0.02083333333333333 0.2041666666666667 0.7958333333333333</probabilities>
+		</cpt>
+		<cpt id="PW">
+			<state id="si" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.4902152641878669 0.509784735812133 0.9935064935064936 0.006493506493506494 0.4010416666666666 0.5989583333333333 0.4073033707865168 0.5926966292134831 0.4791666666666666 0.5208333333333333 0.4291666666666666 0.5708333333333333</probabilities>
+		</cpt>
+		<cpt id="PH">
+			<state id="si" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.4765166340508806 0.5234833659491194 0.6428571428571429 0.3571428571428572 0.9947916666666666 0.005208333333333333 0.3567415730337078 0.6432584269662921 0.2291666666666667 0.7708333333333333 0.4625 0.5375</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2423.0 ACADEMIC" name="Network1">
+			<node id="St">
+				<name>S_t (estado del bot en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>398 411 433 432</position>
+				<barchart active="true" width="188" height="126" />
+			</node>
+			<node id="st_1">
+				<name>S_t_1 (estado del bot en tiempo t+1)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>391 225 433 251</position>
+				<barchart active="true" width="200" height="126" />
+			</node>
+			<node id="H">
+				<name>H(Salud)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>117 347 151 368</position>
+				<barchart active="true" width="188" height="64" />
+			</node>
+			<node id="W">
+				<name>W(Armas del bot en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>119 228 154 249</position>
+				<barchart active="true" width="185" height="64" />
+			</node>
+			<node id="OW">
+				<name>OW(Armas oponente en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>115 83 155 108</position>
+				<barchart active="true" width="186" height="64" />
+			</node>
+			<node id="HN">
+				<name>HN(Se oye sonido en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>393 81 430 104</position>
+				<barchart active="true" width="209" height="64" />
+			</node>
+			<node id="NE">
+				<name>NE(Numero enemigos cercanos en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>686 81 722 103</position>
+				<barchart active="true" width="247" height="64" />
+			</node>
+			<node id="PW">
+				<name>PW( hay un arma cercana en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>697 228 735 251</position>
+				<barchart active="true" width="266" height="64" />
+			</node>
+			<node id="PH">
+				<name>PH( hay un paquete de salud cercano en tiempo t)</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>696 351 732 373</position>
+				<barchart active="true" width="263" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
