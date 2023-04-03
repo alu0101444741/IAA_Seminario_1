@@ -1,0 +1,4 @@
+red_bot_2 contine la red sin aprendizaje
+
+red_bot_3 ya realizo aprendizaje, usar con 
+red_bot_2 para comparar resultados
