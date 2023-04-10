@@ -27,10 +27,6 @@ class BotShooterIAA:
             ds = pysmile.learning.DataSet()
             ds.read_file(fichero)
 
-            pc = pysmile.learning.PC()
-            pattern = pc.learn(ds)
-            net = pattern.make_network(ds)
-            #net.write_file("tutorial9-pc.xdsl")
             em = pysmile.learning.EM()
 
             matching = ds.match_network(net)
